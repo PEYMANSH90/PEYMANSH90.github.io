@@ -35,6 +35,12 @@ section {
     border-radius: 8px;
 }
 
+section#home {
+    background-color: #e0e0e0;
+    text-align: center;
+    padding: 50px 0;
+}
+
 footer {
     background: #333;
     color: #fff;
