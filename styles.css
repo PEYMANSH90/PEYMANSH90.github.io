@@ -698,9 +698,16 @@ section {
     color: var(--primary-color);
 }
 
-.contact-item span {
+.contact-item span,
+.contact-item a {
     font-size: 1.1rem;
     color: var(--text-primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.contact-item a:hover {
+    color: var(--primary-color);
 }
 
 .contact-form {
