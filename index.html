@@ -1,354 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peyman Shamsi - Robotics Engineer & Automation Specialist</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peyman Shamsi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      color: #222;
+      background: #fff;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+
+    a { color: #2563eb; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Header */
+    .name { font-size: 26px; font-weight: 600; margin-bottom: 4px; }
+    .tagline { color: #555; margin-bottom: 12px; }
+    .links { display: flex; gap: 16px; flex-wrap: wrap; font-size: 14px; margin-bottom: 40px; }
+    .links a { color: #2563eb; }
+
+    /* Sections */
+    section { margin-bottom: 40px; }
+    h2 {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #888;
+      margin-bottom: 14px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #eee;
+    }
+
+    p { margin-bottom: 10px; color: #333; }
+
+    /* Projects */
+    .project { margin-bottom: 24px; }
+    .project-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; }
+    .project-title { font-weight: 500; font-size: 15px; }
+    .project-links { display: flex; gap: 12px; font-size: 13px; }
+    .project-desc { color: #444; margin-top: 4px; font-size: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+    .tag {
+      font-size: 12px;
+      background: #f3f4f6;
+      color: #555;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    /* Video embed */
+    .video-wrap {
+      margin-top: 10px;
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 6px;
+      background: #f3f4f6;
+    }
+    .video-wrap iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: none;
+    }
+    .video-placeholder {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #999;
+      font-size: 13px;
+    }
+
+    /* Experience */
+    .exp-item { margin-bottom: 20px; }
+    .exp-header { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px; }
+    .exp-title { font-weight: 500; }
+    .exp-date { font-size: 13px; color: #888; }
+    .exp-org { font-size: 14px; color: #555; margin-bottom: 4px; }
+    .exp-desc { font-size: 14px; color: #444; }
+
+    /* Skills */
+    .skills-list { display: flex; flex-wrap: wrap; gap: 8px; }
+    .skill {
+      font-size: 13px;
+      background: #f3f4f6;
+      color: #444;
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+
+    /* Research interests */
+    ul.interests { padding-left: 18px; color: #333; font-size: 14px; }
+    ul.interests li { margin-bottom: 4px; }
+
+    @media (max-width: 480px) {
+      body { padding: 32px 16px 60px; }
+      .project-header { flex-direction: column; }
+    }
+  </style>
 </head>
 <body>
-    <div class="theme-toggle">
-        <i class="fas fa-moon"></i>
+
+  <div class="name">Peyman Shamsi</div>
+  <div class="tagline">MSc Mechatronics · Politecnico di Torino · RL for Robot Manipulation</div>
+  <div class="links">
+    <a href="mailto:peyman.shamsi@studenti.polito.it">Email</a>
+    <a href="https://github.com/PEYMANSH90" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/peyman-shamsi-b77789138" target="_blank">LinkedIn</a>
+    <a href="Peyman_Shamsi_CV.pdf" target="_blank">CV (PDF)</a>
+  </div>
+
+  <section>
+    <h2>About</h2>
+    <p>
+      I am an MSc student in Mechatronics Engineering at Politecnico di Torino,
+      specializing in Software Technologies for Automation. My work sits at the
+      intersection of reinforcement learning, imitation learning, and robot manipulation.
+    </p>
+    <p>
+      Currently working on RL fine-tuning of flow-matching policies for robot manipulation,
+      building on the MSG framework (von Hartz et al., 2025) using the ReinFlow pipeline in RLBench.
+    </p>
+  </section>
+
+  <section>
+    <h2>Research Interests</h2>
+    <ul class="interests">
+      <li>RL fine-tuning of flow-matching (diffusion-based) manipulation policies</li>
+      <li>Intersection of control theory, imitation learning, and reinforcement learning</li>
+      <li>Sample efficiency and stability in policy learning</li>
+      <li>Sim-to-real transfer via domain randomization</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <div class="project-header">
+        <span class="project-title">RL Fine-tuning of Multi-Stream Generative Policies</span>
+        <div class="project-links">
+          <span style="font-size:13px;color:#888;">work in progress · targeting publication</span>
+        </div>
+      </div>
+      <div class="project-desc">
+        Applying ReinFlow (Zhang et al., 2025) to online RL fine-tune MSG (von Hartz et al., 2025),
+        a multi-stream object-centric flow policy, in RLBench (CoppeliaSim).
+        Raised task success rate from 30% → 44% over the imitation-learning baseline.
+        Open issues include training instability and non-smooth end-effector trajectories.
+      </div>
+      <div class="tags">
+        <span class="tag">PyTorch</span>
+        <span class="tag">RLBench</span>
+        <span class="tag">CoppeliaSim</span>
+        <span class="tag">Flow Matching</span>
+        <span class="tag">PPO</span>
+      </div>
+      <!-- Replace src below with your YouTube embed URL when ready -->
+      <!-- <div class="video-wrap"><iframe src="https://www.youtube.com/embed/YOUR_ID" allowfullscreen></iframe></div> -->
     </div>
-    
-    <header class="header">
-        <div class="container">
-            <div class="header-top">
-                <h1 class="title">Peyman Shamsi</h1>
-                <p class="subtitle">Robotics Engineer & Automation Specialist</p>
-                <button class="mobile-menu-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-            <nav class="nav">
-                <ul>
-                    <li><a href="#home" class="nav-link">Home</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#skills" class="nav-link">Skills</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#experience" class="nav-link">Experience</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
+
+    <div class="project">
+      <div class="project-header">
+        <span class="project-title">Sim-to-Real Domain Randomization via Entropy Maximization</span>
+        <div class="project-links">
+          <a href="https://github.com/PEYMANSH90/sim-to-real-domain-randomization-using-entropy-maximization-" target="_blank">GitHub</a>
         </div>
-    </header>
+      </div>
+      <div class="project-desc">
+        Implemented an entropy-maximization-based domain randomization method for sim-to-real
+        transfer, evaluated on the MuJoCo Hopper benchmark.
+      </div>
+      <div class="tags">
+        <span class="tag">PyTorch</span>
+        <span class="tag">MuJoCo</span>
+        <span class="tag">Domain Randomization</span>
+        <span class="tag">PPO</span>
+      </div>
+      <!-- <div class="video-wrap"><iframe src="https://www.youtube.com/embed/YOUR_ID" allowfullscreen></iframe></div> -->
+    </div>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h2 class="hero-title">Hello, I'm Peyman</h2>
-                    <p class="hero-text">Passionate Robotics Engineer from Torino, Italy, specializing in intelligent automation systems, ROS development, and industrial robotics. I transform complex challenges into elegant robotic solutions.</p>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">View My Work</a>
-                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="robot-animation">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <div class="floating-elements">
-                        <div class="floating-icon" style="--delay: 0s"><i class="fab fa-ros"></i></div>
-                        <div class="floating-icon" style="--delay: 1s"><i class="fas fa-cube"></i></div>
-                        <div class="floating-icon" style="--delay: 2s"><i class="fab fa-python"></i></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="about">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>I am a dedicated Robotics Engineer with over 5 years of experience in developing cutting-edge robotic systems and automation solutions. My passion lies in creating intelligent machines that can work seamlessly in industrial environments with minimal power consumption.</p>
-                        <p>My expertise spans across ROS/ROS2 development, Gazebo simulation, machine learning integration, and real-time control systems. I've worked on projects ranging from autonomous mobile robots to sophisticated industrial manipulators, with a focus on reinforcement learning-based control strategies.</p>
-                        <p>I believe in the power of robotics to revolutionize industries and improve human lives. Every project I work on is an opportunity to push the boundaries of what's possible in automation, particularly in optimizing power consumption for sustainable robotics applications.</p>
-                    </div>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <span class="stat-number">5+</span>
-                            <span class="stat-label">Years Experience</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">15+</span>
-                            <span class="stat-label">Projects Completed</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">8+</span>
-                            <span class="stat-label">Technologies</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">Success Rate</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills" class="skills">
-            <div class="container">
-                <h2 class="section-title">Skills & Technologies</h2>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <i class="fab fa-robot"></i>
-                        <h3>ROS/ROS2</h3>
-                        <p>Advanced Robot Operating System development, node creation, and system integration</p>
-                        <div class="skill-level">
-                            <div class="skill-bar" data-level="95"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fas fa-cube"></i>
-                        <h3>Gazebo Simulation</h3>
-                        <p>3D robotics simulation, environment modeling, and physics-based testing</p>
-                        <div class="skill-level">
-                            <div class="skill-bar" data-level="90"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fab fa-python"></i>
-                        <h3>Python Development</h3>
-                        <p>Robotics programming, automation scripts, and machine learning integration</p>
-                        <div class="skill-level">
-                            <div class="skill-bar" data-level="92"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fab fa-cpp"></i>
-                        <h3>C++ Programming</h3>
-                        <p>High-performance robotics applications and real-time control systems</p>
-                        <div class="skill-level">
-                            <div class="skill-bar" data-level="88"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fas fa-brain"></i>
-                        <h3>Machine Learning</h3>
-                        <p>AI integration, computer vision, and intelligent decision-making systems</p>
-                        <div class="skill-level">
-                            <div class="skill-bar" data-level="85"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fas fa-microchip"></i>
-                        <h3>Embedded Systems</h3>
-                        <p>Hardware integration, sensor fusion, and microcontroller programming</p>
-                        <div class="skill-level">
-                            <div class="skill-bar" data-level="87"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <div class="project-content">
-                            <h3>TD3 Robot Torque Control System</h3>
-                            <p>Advanced reinforcement learning-based torque control system for ABB IRB1600 robot using TD3 algorithm. Implements curriculum learning with load compensation and real-time simulation in Gazebo. Features intelligent power consumption optimization for pick-and-place operations.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">ROS2</span>
-                                <span class="tech-tag">Gazebo</span>
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">TD3</span>
-                                <span class="tech-tag">Reinforcement Learning</span>
-                                <span class="tech-tag">Power Optimization</span>
-                            </div>
-                            <a href="https://github.com/PEYMANSH90/RL-Pick-and-Place" class="project-link">
-                                <i class="fab fa-github"></i> View on GitHub
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card">
-                        <div class="project-image" style="background: linear-gradient(135deg, #6c5ce7, #a29bfe);">
-                            <i class="fas fa-eye"></i>
-                        </div>
-                        <div class="project-content">
-                            <h3>Advanced White Object Tracking System</h3>
-                            <p>Sophisticated computer vision system for real-time white object tracking using OpenCV and Python. Features advanced image processing techniques, PID control systems, and robust object detection algorithms optimized for robotics applications.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">OpenCV</span>
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">PID Control</span>
-                                <span class="tech-tag">Computer Vision</span>
-                                <span class="tech-tag">Real-time Processing</span>
-                                <span class="tech-tag">Robotics</span>
-                            </div>
-                            <a href="https://github.com/PEYMANSH90/advanced-tracking" class="project-link">
-                                <i class="fab fa-github"></i> View on GitHub
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card">
-                        <div class="project-image" style="background: linear-gradient(135deg, #ff6b6b, #ee5a24);">
-                            <i class="fas fa-cogs"></i>
-                        </div>
-                        <div class="project-content">
-                            <h3>Industrial Automation System</h3>
-                            <p>Complete industrial automation solution with multiple robot coordination, vision systems, and quality control integration for manufacturing processes.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">ROS</span>
-                                <span class="tech-tag">Computer Vision</span>
-                                <span class="tech-tag">PLC</span>
-                                <span class="tech-tag">SCADA</span>
-                            </div>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> View Details
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card">
-                        <div class="project-image" style="background: linear-gradient(135deg, #4834d4, #686de0);">
-                            <i class="fas fa-car"></i>
-                        </div>
-                        <div class="project-content">
-                            <h3>Autonomous Mobile Robot</h3>
-                            <p>Self-navigating mobile robot with SLAM capabilities, obstacle avoidance, and path planning for warehouse automation and logistics applications.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">SLAM</span>
-                                <span class="tech-tag">Navigation</span>
-                                <span class="tech-tag">LIDAR</span>
-                                <span class="tech-tag">ROS2</span>
-                            </div>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> View Details
-                            </a>
-                        </div>
-                    </div>
-                    
-   
-                </div>
-            </div>
-        </section>
-
-        <section id="experience" class="experience">
-            <div class="container">
-                <h2 class="section-title">Professional Experience</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h3>Robotics Engineer & Researcher</h3>
-                            <p class="timeline-company">Independent Research & Development</p>
-                            <p class="timeline-date">2022 - Present</p>
-                            <p>Leading research in reinforcement learning-based robotic control systems, developing TD3 algorithms for ABB IRB1600 robots. Specializing in power consumption optimization and intelligent pick-and-place operations with curriculum learning approaches.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h3>Automation & Control Systems Engineer</h3>
-                            <p class="timeline-company">Industrial Automation Projects</p>
-                            <p class="timeline-date">2020 - 2022</p>
-                            <p>Developed ROS-based control systems, implemented DH conventions, inverse kinematics solvers, and intelligent control algorithms for various robotic platforms. Created simulation environments using Gazebo for testing and validation.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h3>Robotics Software Developer</h3>
-                            <p class="timeline-company">Research & Development</p>
-                            <p class="timeline-date">2018 - 2020</p>
-                            <p>Conducted research on autonomous navigation, developed experimental robotic systems, and implemented machine learning algorithms for intelligent control. Published findings in robotics conferences and contributed to open-source robotics projects.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:peymanshamsi77@gmail.com">peymanshamsi77@gmail.com</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <a href="tel:+393516345247">+39 351 634 5247</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fab fa-linkedin"></i>
-                            <a href="https://www.linkedin.com/in/peyman-shamsi-b77789138/" target="_blank">linkedin.com/in/peyman-shamsi-b77789138</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fab fa-github"></i>
-                            <a href="https://github.com/PEYMANSH90" target="_blank">github.com/PEYMANSH90</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Torino, Italy</span>
-                        </div>
-                    </div>
-                    <div class="contact-form">
-                        <h3>Send me a message</h3>
-                        <form>
-                            <div class="form-group">
-                                <input type="text" placeholder="Your Name" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" placeholder="Your Email" required>
-                            </div>
-                            <div class="form-group">
-                                <textarea placeholder="Your Message" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Send Message</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Peyman Shamsi</h3>
-                    <p>Robotics Engineer & Automation Specialist</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Connect</h4>
-                    <div class="social-links">
-                        <a href="https://github.com/PEYMANSH90" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/peyman-shamsi-b77789138/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="mailto:peymanshamsi77@gmail.com"><i class="fas fa-envelope"></i></a>
-                        <a href="tel:+393516345247"><i class="fas fa-phone"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Peyman Sh. All rights reserved.</p>
-            </div>
+    <div class="project">
+      <div class="project-header">
+        <span class="project-title">RL for Robotic Pick-and-Place with Torque Control</span>
+        <div class="project-links">
+          <a href="https://github.com/PEYMANSH90/RL-Pick-and-Place" target="_blank">GitHub</a>
         </div>
-    </footer>
+      </div>
+      <div class="project-desc">
+        TD3-based torque control for an ABB IRB1600 in pick-and-place tasks,
+        with DH convention, IK solver, and power consumption optimization.
+      </div>
+      <div class="tags">
+        <span class="tag">Python</span>
+        <span class="tag">TD3</span>
+        <span class="tag">Stable-Baselines3</span>
+        <span class="tag">Gazebo</span>
+      </div>
+      <!-- <div class="video-wrap"><iframe src="https://www.youtube.com/embed/YOUR_ID" allowfullscreen></iframe></div> -->
+    </div>
 
-    <script src="script.js"></script>
+    <div class="project">
+      <div class="project-header">
+        <span class="project-title">Real-time Object Tracking with PID Control</span>
+        <div class="project-links">
+          <a href="https://github.com/PEYMANSH90/advanced-tracking" target="_blank">GitHub</a>
+        </div>
+      </div>
+      <div class="project-desc">
+        Computer vision system for real-time white object tracking using HSV detection,
+        morphological filtering, and a PID controller for smooth trajectory output.
+      </div>
+      <div class="tags">
+        <span class="tag">Python</span>
+        <span class="tag">OpenCV</span>
+        <span class="tag">PID Control</span>
+      </div>
+      <!-- <div class="video-wrap"><iframe src="https://www.youtube.com/embed/YOUR_ID" allowfullscreen></iframe></div> -->
+    </div>
+
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <span class="exp-title">Robotics Engineer</span>
+        <span class="exp-date">Sep – Dec 2025</span>
+      </div>
+      <div class="exp-org">Therness (startup) · Turin, Italy</div>
+      <div class="exp-desc">
+        Configured ABB CRB 15000 collaborative arm and performed welds to expand
+        a weld-defect classifier dataset. Set up real-time data acquisition from the robot arm.
+        Explored online RL deployment; identified hardware limitations of the CRB 15000 for real-time RL.
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <span class="exp-title">QC/QA → Technical Office Engineer</span>
+        <span class="exp-date">May 2021 – Jan 2023</span>
+      </div>
+      <div class="exp-org">South Pars Gas Company (Mapna) · Iran</div>
+      <div class="exp-desc">
+        QC/QA in piping sector (erection, installation, welding inspection),
+        then Technical Office editing isometric drawings with CAD and validating materials.
+      </div>
+    </div>
+
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="exp-item">
+      <div class="exp-header">
+        <span class="exp-title">MSc Mechatronics Engineering</span>
+        <span class="exp-date">2024 – 2026</span>
+      </div>
+      <div class="exp-org">Politecnico di Torino · Turin, Italy</div>
+      <div class="exp-desc">Specialization: Software Technologies for Automation (AI, Robotics, Automation)</div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-header">
+        <span class="exp-title">BSc Mechanical Engineering</span>
+        <span class="exp-date">2016 – 2020</span>
+      </div>
+      <div class="exp-org">Persian Gulf University · Bushehr, Iran</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <span class="skill">Python</span>
+      <span class="skill">PyTorch</span>
+      <span class="skill">NumPy</span>
+      <span class="skill">MuJoCo</span>
+      <span class="skill">RLBench</span>
+      <span class="skill">CoppeliaSim</span>
+      <span class="skill">Gazebo</span>
+      <span class="skill">ROS</span>
+      <span class="skill">Git</span>
+      <span class="skill">Linux</span>
+    </div>
+  </section>
+
 </body>
 </html>
